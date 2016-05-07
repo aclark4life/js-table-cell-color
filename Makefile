@@ -61,7 +61,7 @@ install: python-virtualenv-create python-pip-install
 lint: python-flake python-yapf python-wc
 release: python-package-release
 releasetest: python-package-release-test
-serve: django-serve
+serve: static-serve
 static: django-static
 test: django-test
 vm: vagrant-up
@@ -194,6 +194,10 @@ python-package-release-test:
 sphinx-start:
 	sphinx-quickstart -q -p "Python Project" -a "Alex Clark" -v 0.0.1 doc
 
+# Static
+static-serve:
+	python -m SimpleHTTPServer .
+
 # Vagrant
 vagrant-box-update:
 	vagrant box update
@@ -205,7 +209,3 @@ vagrant-init:
 	vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
 vagrant-up:
 	vagrant up --provision
-
-# js-table-cell-color
-serve:
-	python -m SimpleHTTPServer .
