@@ -61,7 +61,7 @@ install: python-virtualenv-create python-pip-install
 lint: python-flake python-yapf python-wc
 release: python-package-release
 releasetest: python-package-release-test
-serve: django-serve
+serve: static-serve
 static: django-static
 test: django-test
 vm: vagrant-up
