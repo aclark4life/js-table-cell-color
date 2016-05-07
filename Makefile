@@ -61,7 +61,7 @@ install: python-virtualenv-create python-pip-install
 lint: python-flake python-yapf python-wc
 release: python-package-release
 releasetest: python-package-release-test
-serve: static-serve
+serve: django-serve
 static: django-static
 test: django-test
 vm: vagrant-up
@@ -196,7 +196,8 @@ sphinx-start:
 
 # Static
 static-serve:
-	python -m SimpleHTTPServer .
+	@echo "\n\tServing HTTP on http://0.0.0.0:8000\n"
+	python -m SimpleHTTPServer
 
 # Vagrant
 vagrant-box-update:
