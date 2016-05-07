@@ -205,3 +205,7 @@ vagrant-init:
 	vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
 vagrant-up:
 	vagrant up --provision
+
+# js-table-cell-color
+serve:
+	python -m SimpleHTTPServer .
